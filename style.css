@@ -1,0 +1,229 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    all: unset;
+}
+
+.container {
+    max-width: 1080px;
+    min-width: 1080px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'PTRootUIWebMedium';
+    src: url('fonts/PT-Root-UI_Medium.woff2') format('woff2'),
+    url('fonts/PT-Root-UI_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.logo img {
+    height: 30px;
+    filter: invert(57%) sepia(63%) saturate(4001%) hue-rotate(1deg) brightness(104%) contrast(104%);
+}
+
+.logo span {
+    margin-left: 5px;
+}
+
+main {
+    font-family: "PTRootUIWebMedium";
+}
+
+.logo_href {
+    font-family: "PTRootUIWebMedium";
+    font-size: 42px;
+    color: #FF7D00;
+    text-decoration: none;
+}
+
+.baner_header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border: 2px solid #FF7D00;
+    border-radius: 25px;
+    color: #FF7D00;
+    background: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #FF7D00;
+    transition: 1s;
+    color: white;
+}
+
+.slogan {
+    color: #444;
+    font-weight: lighter;
+    font-size: 65px;
+}
+
+.tiktok {
+    padding-top: 10px;
+    height: 60px;
+}
+
+.beta {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.beta_label {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.beta_input {
+    display: block;
+    height: 35px;
+    border-radius: 25px;
+    border: 3px solid white;
+    background: #eee;
+    width: 200px;
+    padding: 5px 25px;
+    box-shadow: none;
+}
+
+.beta_div {
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    border-radius: 25px;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.beta_orange {
+    color: #FF7D00;
+    font-weight: bold;
+}
+
+.beta_button {
+    background: #FF7D00;
+    border: 3px solid white;
+    margin-left: -53px;
+    height: 50px !important;
+    color: white;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.features {
+    padding: 0;
+    margin-left: 10px;
+    margin-bottom: 60px;
+}
+
+.feature {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature_text {
+    padding: 0;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #444;
+}
+
+.fa-bolt {
+    padding-right: 7px;
+}
+
+.fa-arrows-spin {
+    padding-right: 3px;
+}
+
+.fa-solid {
+    color: #444;
+}
+
+.google_play_href {
+    margin: 0;
+    padding: 0;
+}
+
+.email_form {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 30px;
+}
+
+.beta_label {
+    margin-bottom: 15px;
+    font-family: "PTRootUIWebMedium";
+}
+
+.error_message_block {
+    margin-left: 10px;
+    font-family: "PTRootUIWebMedium";
+}
+
+.hero {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.error_message_block {
+    display: none;
+}
+.show_anim {
+    animation: 1s show ease;
+}
+footer{
+    font-family: "PTRootUIWebMedium";
+}
+
+@keyframes show {
+    from { opacity: 0; padding-top: 5px;}
+    to { opacity: 1; padding-top: 0; }
+}
+
+@media screen and (max-width: 1080px) {
+    .container {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        padding: 0 20px;
+    }
+
+    .hero {
+        align-items: center;
+    }
+
+    .features {
+        margin-left: 20px;
+    }
+
+    .beta_input {
+        padding: 0;
+    }
+}
