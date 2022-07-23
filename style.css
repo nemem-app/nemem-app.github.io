@@ -230,4 +230,22 @@ footer{
         font-size: 55px;
         text-align: center;
     }
+    .beta_button {
+        background: #FF7D00;
+        border: 3px solid white;
+        margin-left: -30px;
+        height: 50px !important;
+        color: white;
+    }
+    .beta_input {
+        display: block;
+        height: 35px;
+        border-radius: 25px;
+        border: 3px solid white;
+        background: #eee;
+        width: 200px;
+        margin-right: 0px;
+        padding: 5px 10px;
+        box-shadow: none;
+    }
 }
