@@ -212,7 +212,6 @@ footer{
         width: 100%;
         min-width: unset;
         max-width: unset;
-        padding: 0 20px;
     }
 
     .hero {
@@ -225,5 +224,13 @@ footer{
 
     .beta_input {
         padding: 0;
+    }
+    .navbar{
+        display: none;
+    }
+    .slogan {
+        color: #444;
+        font-size: 55px;
+        text-align: center;
     }
 }
