@@ -33,7 +33,7 @@ input {
 
 .logo img {
     height: 30px;
-    filter: invert(57%) sepia(63%) saturate(4001%) hue-rotate(1deg) brightness(104%) contrast(104%);
+    filter: invert(47%) sepia(100%) saturate(2861%) hue-rotate(353deg) brightness(96%) contrast(111%);
 }
 
 .logo span {
@@ -47,7 +47,9 @@ main {
 .logo_href {
     font-family: "PTRootUIWebMedium";
     font-size: 42px;
-    color: #FF7D00;
+    color: #FE5906;
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -56,20 +58,21 @@ main {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .button {
     box-sizing: border-box;
     padding: 10px 30px;
-    border: 2px solid #FF7D00;
+    border: 2px solid #FE5906;
     border-radius: 25px;
-    color: #FF7D00;
+    color: #FE5906;
     background: white;
     text-decoration: none;
 }
 
 .button:hover {
-    background: #FF7D00;
+    background: #FE5906;
     transition: 1s;
     color: white;
 }
@@ -116,12 +119,12 @@ main {
 }
 
 .beta_orange {
-    color: #FF7D00;
+    color: #FE5906;
     font-weight: bold;
 }
 
 .beta_button {
-    background: #FF7D00;
+    background: #FE5906;
     border: 3px solid white;
     margin-left: -53px;
     height: 50px !important;
@@ -129,6 +132,7 @@ main {
 }
 
 footer {
+    color: #999;
     margin-top: 30px;
 }
 
@@ -187,6 +191,7 @@ footer {
 
 .hero {
     display: flex;
+    position: relative;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -201,13 +206,24 @@ footer {
 footer{
     font-family: "PTRootUIWebMedium";
 }
-
+.images {
+    position: absolute;
+    right: -100px;
+    width: 800px;
+}
+.images img{
+    width: 100%;
+}
 @keyframes show {
     from { opacity: 0; padding-top: 5px;}
     to { opacity: 1; padding-top: 0; }
 }
 
 @media screen and (max-width: 1080px) {
+    .images {
+        position:relative;
+        display: none;
+    }
     .container {
         width: 100%;
         min-width: unset;
@@ -231,7 +247,7 @@ footer{
         text-align: center;
     }
     .beta_button {
-        background: #FF7D00;
+        background: #FE5906;
         border: 3px solid white;
         margin-left: -30px;
         height: 50px !important;
