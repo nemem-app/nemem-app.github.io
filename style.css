@@ -32,8 +32,7 @@ input {
 }
 
 .logo img {
-    height: 30px;
-    filter: invert(47%) sepia(100%) saturate(2861%) hue-rotate(353deg) brightness(96%) contrast(111%);
+    height: 43px;
 }
 
 .logo span {
@@ -218,6 +217,22 @@ footer{
     from { opacity: 0; padding-top: 5px;}
     to { opacity: 1; padding-top: 0; }
 }
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 @media screen and (max-width: 1080px) {
     .images {
@@ -238,9 +253,9 @@ footer{
         margin-left: 20px;
     }
 
-    .navbar{
-        display: none;
-    }
+    /*.navbar{*/
+    /*    display: none;*/
+    /*}*/
     .slogan {
         color: #444;
         font-size: 55px;
@@ -264,4 +279,30 @@ footer{
         padding: 5px 10px;
         box-shadow: none;
     }
+}
+
+.loading{
+    position: relative;
+    pointer-events: none;
+}
+.loading::after{
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: 2px;
+    animation: rotating 2s linear infinite;
+    left: calc(50% - 20px);
+    position: absolute;
+    background: url(logo.svg);
+    background-size: contain;
+}
+.loading::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(111,111,111,0.5);
+    border-radius: 25px;
 }
