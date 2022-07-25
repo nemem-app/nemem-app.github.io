@@ -9,6 +9,7 @@ form.onsubmit = async (e) => {
     for (tester of betatasets) {
         if (tester === data) {
             alert("This email is already registered")
+            submit.classList.toggle("loading")
             return
         }
     }
