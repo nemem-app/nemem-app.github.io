@@ -123,6 +123,7 @@ main {
 }
 
 .beta_button {
+    cursor: pointer;
     background: #FE5906;
     border: 3px solid white;
     margin-left: -53px;

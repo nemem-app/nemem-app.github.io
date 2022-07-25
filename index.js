@@ -4,7 +4,7 @@ form.onsubmit = async (e) => {
     e.preventDefault();
     submit.classList.toggle("loading")
     let data = document.getElementById("email").value
-    let response = await fetch('http://85.209.2.93/graphql/', {
+    let response = await fetch('https://nemem.app/app/graphql/', {
         method: 'POST',
         body: `mutation{addBetatester(email: "${data}"){ok}}`
     }).then(resp => {
