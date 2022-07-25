@@ -19,7 +19,7 @@ form.onsubmit = async (e) => {
     }).then(resp => {
         alert("Your email successfully received");
         submit.classList.toggle("loading")
-        betatasets.append(data)
+        betatasets.push(data)
     }).catch(error => {
         console.error('There was an error!', error);
         alert("Error please try later");
