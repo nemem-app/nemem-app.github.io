@@ -6,7 +6,7 @@ form.onsubmit = async (e) => {
     e.preventDefault();
     submit.classList.toggle("loading")
     let data = document.getElementById("email").value
-    for (tester in betatasets) {
+    for (tester of betatasets) {
         if (tester === data) {
             alert("This email is already registered")
             return
