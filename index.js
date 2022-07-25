@@ -6,6 +6,7 @@ form.onsubmit = async (e) => {
     let data = document.getElementById("email").value
     let response = await fetch('https://nemem.app/app/graphql/', {
         method: 'POST',
+        headers: {"content-type": "application/json",},
         body: JSON.stringify({query: `mutation{addBetatester(email: "${data}"){ok}}`})
     }).then(resp => {
         alert("Your email successfully received");
