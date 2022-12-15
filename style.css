@@ -7,7 +7,6 @@ main {
 input {
     all: unset;
 }
-
 .container {
     max-width: 1080px;
     min-width: 1080px;
@@ -42,7 +41,14 @@ input {
 main {
     font-family: "PTRootUIWebMedium";
 }
-
+.app_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app_content .social_media_block{
+    display: none;
+}
 .logo_href {
     font-family: "PTRootUIWebMedium";
     font-size: 42px;
@@ -70,10 +76,21 @@ main {
     text-decoration: none;
 }
 
+.button-no-border {
+    border: none;
+    padding: 10px 10px;
+}
+
 .button:hover {
     background: #FE5906;
-    transition: 1s;
+    transition: none;
     color: white;
+}
+
+.button-no-border:hover {
+    background: none;
+    transition: 1s;
+    color: #FE5906;
 }
 
 .slogan {
@@ -90,6 +107,26 @@ main {
 .beta {
     font-weight: bold;
     font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_media_block_icon {
+    height: 45px;
+}
+
+.social_media_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_media_block_link {
+    margin-right: 10px;
 }
 
 .beta_label {
@@ -200,24 +237,37 @@ footer {
 .error_message_block {
     display: none;
 }
+
 .show_anim {
     animation: 1s show ease;
 }
-footer{
+
+footer {
     font-family: "PTRootUIWebMedium";
 }
+
 .images {
     position: absolute;
     right: -100px;
+    top: 20px;
     width: 800px;
 }
-.images img{
+
+.images img {
     width: 100%;
 }
+
 @keyframes show {
-    from { opacity: 0; padding-top: 5px;}
-    to { opacity: 1; padding-top: 0; }
+    from {
+        opacity: 0;
+        padding-top: 5px;
+    }
+    to {
+        opacity: 1;
+        padding-top: 0;
+    }
 }
+
 @keyframes rotating {
     from {
         -ms-transform: rotate(0deg);
@@ -236,10 +286,15 @@ footer{
 }
 
 @media screen and (max-width: 1080px) {
-    .images {
-        position:relative;
+    .hide-mobile {
         display: none;
     }
+
+    .images {
+        position: relative;
+        display: none;
+    }
+
     .container {
         width: 100%;
         min-width: unset;
@@ -262,6 +317,7 @@ footer{
         font-size: 55px;
         text-align: center;
     }
+
     .beta_button {
         background: #FE5906;
         border: 3px solid white;
@@ -269,6 +325,7 @@ footer{
         height: 50px !important;
         color: white;
     }
+
     .beta_input {
         display: block;
         height: 35px;
@@ -280,13 +337,38 @@ footer{
         padding: 5px 10px;
         box-shadow: none;
     }
+
+    .button {
+        padding: 10px 10px;
+    }
+
+    .button-no-border {
+        border: none;
+        padding: 0px 4px;
+    }
+    .social_media_block {
+        margin-right: 5px;
+    }
+    .navbar .social_media_block{
+        display: none;
+    }
+    .app_content .social_media_block{
+        display: flex;
+    }
+    .social_media_block_icon{
+        height: 68px;
+    }
+    footer{
+        text-align: center;
+    }
 }
 
-.loading{
+.loading {
     position: relative;
     pointer-events: none;
 }
-.loading::after{
+
+.loading::after {
     content: '';
     width: 40px;
     height: 40px;
@@ -297,13 +379,14 @@ footer{
     background: url(logo.svg);
     background-size: contain;
 }
-.loading::before{
+
+.loading::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(111,111,111,0.5);
+    background: rgba(111, 111, 111, 0.5);
     border-radius: 25px;
 }
