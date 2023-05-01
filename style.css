@@ -22,7 +22,10 @@ input {
     font-weight: normal;
     font-style: normal;
 }
-
+.main-footer{
+    display: flex;
+    flex-flow: row nowrap;
+}
 .logo {
     display: flex;
     flex-flow: row nowrap;
@@ -172,7 +175,11 @@ footer {
     color: #999;
     margin-top: 30px;
 }
-
+.footer-link{
+    color: #999;
+    margin: 0 5px;
+    text-decoration: none;
+}
 .features {
     padding: 0;
     margin-left: 10px;
